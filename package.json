@@ -5,11 +5,28 @@
     "start": "node index"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "express-handlebars": "^3.0.0",
-    "handlebars": "^4.0.12",
-    "jest": "^23.6.0",
-    "nodemon": "^1.18.4",
-    "supertest": "^3.3.0"
-  }
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0"
+  },
+  "name": "puppy-love",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hihi-2018/puppy-love.git"
+  },
+  "keywords": [],
+  "author": "Bobbi,Olive,Kelly,Sungmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hihi-2018/puppy-love/issues"
+  },
+  "homepage": "https://github.com/hihi-2018/puppy-love#readme"
 }
