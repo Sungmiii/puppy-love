@@ -1,0 +1,16 @@
+<div>
+  <img src="{{image}}" alt="{{name}}">
+  <h2>{{name}}</h2>
+  <div>Breed: {{breed}}</div>
+  <div>Owner: {{owner}}</div>
+  <div>
+    <form method="post" action="/comment">
+      <div class="input-field>">
+        <label>Comment:</label>
+        <textarea type="text" name="comment" rows="15" placeholder="Looking for love"></textarea>
+      </div>
+      <button type="submit">Add Comment</button>
+    
+    </form>
+  </div>
+</div>
