@@ -38,7 +38,7 @@
             "owner": "Matthew",
             "image": "/images/puppy5.png",
             "breed": "Pug",
-             "profile": "A square pug in a round hole"
+            "profile": "A square pug in a round hole"
         },
         {
             "id": 6,
@@ -60,7 +60,7 @@
             "id": 8,
             "name": "Scipio",
             "owner": "Sungmi",
-            "image": "/images/puppy8.jpg",
+            "image": "/images/scipio.jpg",
             "breed": "Chihuahua x Fox terrier",
             "profile": "A diamond in the ruff!"
         },
@@ -68,7 +68,7 @@
             "id": 9,
             "name": "Your Puppy Here!!",
             "owner": "You",
-            "image": "/images/logo.jpg",
+            "image": "/images/puppy-love.png",
             "breed": "..."
         }
     ]
