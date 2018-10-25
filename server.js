@@ -12,7 +12,10 @@ server.use(express.static('public'));
 server.set('view engine', 'hbs');
 
 server.get('/', (req, res) => {
-    res.render('index')
+    const content = {
+        title: "PUPPY LOVE | HOME"
+    }
+    res.render('index', content)
 })
 
 module.exports = server;
