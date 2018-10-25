@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* landpage */
+
+.landingpagebg{
+
+background-image: url('../images/dogkiss.jpg');
+background-position: center;
+background-size: cover;
+width: 100%;
+height: 100vh;
+}
+
+.landbgherotext{
+text-align: center;
+position: absolute;
+font-size: 5em;
+color: white;
+top: 50%;
+left: 15%;
+}
+
+.landbtn{
+    margin: 1.5em auto;
+    font-size: .5em;
+    width: 200px;
+    background-color: tomato;
+}
+.landbtn a{
+    color: white;
+}
+
+/* header css */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo img {
+    width: 100px;
+    display: inline-block;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+}
+nav ul li {
+    display: flex;
+    margin-left: 8em;
+    
+}
+
+nav li a{
+text-decoration: none;
+font-size: 1.5rem;
+color:black;
+}
+
+
+/* footer */
+
+footer{
+    margin: 2em 0;
+    text-align: center;
+}
