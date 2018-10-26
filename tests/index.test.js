@@ -1,8 +1,7 @@
-const server = require('./server')
+const file = require('../index')
 
-const PORT = process.env.PORT || 3000
-
-server.listen(PORT, function () {
-  // eslint-disable-next-line no-console
-  console.log('Server is listening on PORT', PORT)
+test("test is running", () =>{
+  expect(true).toBeTruthy()
 })
+
+
