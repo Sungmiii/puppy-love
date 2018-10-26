@@ -45,11 +45,17 @@ router.post("/puppies/comment/:id", (req, res) => {
         puppy.comments.push(req.body.comment)
       }
     }
+
     fs.writeFile('./data.json', JSON.stringify({ puppies: puppies }, null, 4), function (err) {
       res.redirect('/puppies/' + puppy.id) //send to another 'profile' page with "message send"
+
     })
   });
 });
+
+
+
+
 
 
 
