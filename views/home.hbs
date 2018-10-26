@@ -1,7 +1,12 @@
-<div>
+<div class="puppiesprofilepage">
   {{#each puppies}}
+
+  <div class="pup-container">
+    <a href="/puppies/{{name}}"><img class="pup-img" src="{{image}}"></a>
+
   <div>
     <a href="/puppies/{{id}}"><img src="{{image}}"></a>
+
   </div>
   {{/each}}
 </div>
