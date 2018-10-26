@@ -31,18 +31,23 @@ router.get("/puppies/:id", (req, res) => {
   });
 });
 
-router.get("/puppies/comment/:id", (req, res) => {
+router.post("/puppies/comment/:id", (req, res) => {
   fs.readFile("./data.json", "utf8", function(err, data) {
     var id = Number(req.params.id);
     var puppies = JSON.parse(data).puppies;
+
     for (var i = 0; i < puppies.length; i++) {
       if (puppies[i].id === id) {
         var puppy = puppies[i];
-        res.render("comment", puppy);
       }
     }
+  fs.writeFile('./data.json', JSON.stringify(puppies), function(err){
+    res.send('') //send to another 'profile' page with "message send"
+  })
   });
 });
+
+
 
 
 module.exports = router
