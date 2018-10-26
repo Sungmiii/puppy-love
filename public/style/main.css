@@ -95,6 +95,20 @@ color:black;
     align-self: center;
     justify-self: center;
 }
+
+/* profile css */
+.profilecontainer{
+    margin-top: 10em;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+/* edit css */
+section {
+    margin-top: 10em;
+}
 /* footer */
 
 footer{

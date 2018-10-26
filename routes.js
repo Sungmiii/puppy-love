@@ -16,7 +16,6 @@ router.get('/edit', (req, res) => {
 router.get('/puppies', (req, res) => {
   fs.readFile('./data.json', 'utf8', function (err, data) {
     let puppies = JSON.parse(data);
-
     res.render("home", puppies)
   })
 })
@@ -35,20 +34,26 @@ router.get("/puppies/:id", (req, res) => {
 });
 
 router.post("/puppies/comment/:id", (req, res) => {
+  console.log(req.body.comment)
   fs.readFile("./data.json", "utf8", function (err, data) {
     var id = Number(req.params.id);
     var puppies = JSON.parse(data).puppies;
-
     for (var i = 0; i < puppies.length; i++) {
       if (puppies[i].id === id) {
         var puppy = puppies[i];
+        if (!puppy.comments) puppy.comments = []
+        puppy.comments.push(req.body.comment)
       }
     }
-    fs.writeFile('./data.json', JSON.stringify(puppies), function (err) {
-      res.redirect('') //send to another 'profile' page with "message send"
+
+    fs.writeFile('./data.json', JSON.stringify({ puppies: puppies }, null, 4), function (err) {
+      res.redirect('/puppies/' + puppy.id) //send to another 'profile' page with "message send"
+
     })
   });
 });
+
+
 
 
 

@@ -14,7 +14,11 @@
             "owner": "Chloe",
             "image": "/images/puppy2.jpg",
             "breed": "Labrador",
-            "profile": "Is great at science, has a PHD in Bark-eology"
+            "profile": "Is great at science, has a PHD in Bark-eology",
+            "comments": [
+                "sdfdfs",
+                "dsfdsf"
+            ]
         },
         {
             "id": 3,
@@ -62,7 +66,10 @@
             "owner": "Sungmi",
             "image": "/images/scipio.jpg",
             "breed": "Chihuahua x Fox terrier",
-            "profile": "A diamond in the ruff!"
+            "profile": "A diamond in the ruff!",
+            "comments": [
+                "looks good"
+            ]
         },
         {
             "id": 9,
