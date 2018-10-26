@@ -80,7 +80,6 @@ color:black;
     align-items: center;
 }
 .pup-img{
-    align-self: center;
     border-radius: 20%;
     object-fit: cover;
     width: 250px;
@@ -92,6 +91,7 @@ color:black;
     outline: 1px solid black;
     outline-offset: 10px;
     width: 400px;
+    background-color: bisque;
 }
 /* footer */
 

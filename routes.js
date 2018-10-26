@@ -10,6 +10,9 @@ router.get('/', (req, res) => {
   res.render('index', content)
 })
 
+router.get('/edit', (req, res) => {
+  res.render('create')
+})
 router.get('/puppies', (req, res) => {
   fs.readFile('./data.json', 'utf8', function (err, data) {
     let puppies = JSON.parse(data);
@@ -19,7 +22,7 @@ router.get('/puppies', (req, res) => {
 })
 
 router.get("/puppies/:id", (req, res) => {
-  fs.readFile("./data.json", "utf8", function(err, data) {
+  fs.readFile("./data.json", "utf8", function (err, data) {
     var id = Number(req.params.id);
     var puppies = JSON.parse(data).puppies;
     for (var i = 0; i < puppies.length; i++) {
@@ -32,7 +35,7 @@ router.get("/puppies/:id", (req, res) => {
 });
 
 router.post("/puppies/comment/:id", (req, res) => {
-  fs.readFile("./data.json", "utf8", function(err, data) {
+  fs.readFile("./data.json", "utf8", function (err, data) {
     var id = Number(req.params.id);
     var puppies = JSON.parse(data).puppies;
 
@@ -41,9 +44,9 @@ router.post("/puppies/comment/:id", (req, res) => {
         var puppy = puppies[i];
       }
     }
-  fs.writeFile('./data.json', JSON.stringify(puppies), function(err){
-    res.send('') //send to another 'profile' page with "message send"
-  })
+    fs.writeFile('./data.json', JSON.stringify(puppies), function (err) {
+      res.send('') //send to another 'profile' page with "message send"
+    })
   });
 });
 
