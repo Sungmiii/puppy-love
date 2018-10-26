@@ -2,18 +2,18 @@ let supertest = require('supertest');
 let cheerio = require('cheerio');
 let server =require('../server')
 
-// test("check landing page is working", (done) => {
-//     supertest(server).get('/').end(function (err, res) {
-//         expect(err).toBeNull()
-//         let expected = 'PUPPY LOVE'
-//         let $ = cheerio.load(res.text)
-//         let actual = $('a').first().text()
-//         expect(actual).toEqual(expected)
+test("check landing page is working", (done) => {
+    supertest(server).get('/').end(function (err, res) {
+        expect(err).toBeNull()
+        let expected = 'PUPPY LOVE'
+        let $ = cheerio.load(res.text)
+        let actual = $('a').first().text()
+        expect(actual).toEqual(expected)
 
-//         done()
+        done()
 
-//     })
-// })
+    })
+})
 
 test("check text id is correct", (done) => {
     supertest(server).get('/').end(function (err, res) {
