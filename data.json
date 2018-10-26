@@ -6,7 +6,11 @@
             "owner": "Fred",
             "image": "/images/puppy1.jpg",
             "breed": "Labrador",
-            "profile": "Lacks backbone he just rolls over. Still a good boy!"
+            "profile": "Lacks backbone he just rolls over. Still a good boy!",
+            "comments": [
+                "dd",
+                "hello\r\n"
+            ]
         },
         {
             "id": 2,
@@ -17,7 +21,9 @@
             "profile": "Is great at science, has a PHD in Bark-eology",
             "comments": [
                 "sdfdfs",
-                "dsfdsf"
+                "dsfdsf",
+                "momment",
+                ""
             ]
         },
         {
