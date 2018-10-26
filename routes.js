@@ -45,7 +45,7 @@ router.post("/puppies/comment/:id", (req, res) => {
       }
     }
     fs.writeFile('./data.json', JSON.stringify(puppies), function (err) {
-      res.send('') //send to another 'profile' page with "message send"
+      res.redirect('') //send to another 'profile' page with "message send"
     })
   });
 });
