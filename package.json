@@ -5,8 +5,11 @@
     "start": "node index"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "jest": "^23.6.0",
+    "supertest": "^3.3.0"
   },
   "name": "puppy-love",
   "description": "",
