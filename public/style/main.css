@@ -104,7 +104,26 @@ color:black;
     justify-content: center;
     align-items: center;
 }
+.profilelist{
+    margin-top: 1em;
 
+}
+body > div > div:nth-child(6) {
+    margin-bottom: 1em;
+}
+.profilecontainer > * {
+    align-self: center;
+    justify-self: center;
+}
+.profilebtn {
+    margin: 5% 25%;
+    font-size: 1.2em;
+    padding: 15px 32px;
+    color: white;
+    background-color: rgb(205, 125, 125);
+    border-radius: 20px;
+    border: none;
+}
 /* edit css */
 section {
     margin-top: 10em;
