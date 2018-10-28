@@ -41,8 +41,12 @@ router.post("/puppies/comment/:id", (req, res) => {
     for (var i = 0; i < puppies.length; i++) {
       if (puppies[i].id === id) {
         var puppy = puppies[i];
-        if (!puppy.comments) puppy.comments = []
-        puppy.comments.push(req.body.comment)
+        if (!puppy.comments) {
+          puppy.comments = []
+        } else {
+          puppy.comments.push(req.body.comment)
+        }
+
       }
     }
 
