@@ -57,7 +57,20 @@ router.post("/puppies/comment/:id", (req, res) => {
   });
 });
 
+//create new dog profile:sungmi
 
+router.get('/signup', (req, res) => {
+  res.render('signup')
+});
+
+router.post('/signup-receive', (req, res) => {
+  const content = {
+    breed: req.body.breed,
+    owner: req.body.owner,
+    profile: req.body.profile
+  }
+  res.render('signup-receive', content)
+});
 
 
 
