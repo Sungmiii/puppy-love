@@ -63,17 +63,40 @@ router.get('/signup', (req, res) => {
   res.render('signup')
 });
 
-router.post('/signup-receive', (req, res) => {
+/* router.post('/signup-receive', (req, res) => {
   const content = {
     breed: req.body.breed,
     owner: req.body.owner,
     profile: req.body.profile
   }
   res.render('signup-receive', content)
-});
+}); */
+
+//new profile add to puppies data:sungmi
+router.post('/signup-receive', (req, res) => {
+  fs.readFile("./data.json", "utf8", (err, data) => {
+    const puppyId = Number(req.params.id);
+    const puppyList = JSON.parse(data).puppies;
+    for (let i = 0; i < puppyList.length; i++) {
+      console.log(Number(puppyId))
+      const content = {
+        id: req.body.id + 1,
+        breed: req.body.breed,
+        owner: req.body.owner,
+        profile: req.body.profile
+      }
+      puppyList.push(content)
+      console.log(puppyList)
+      break;
+
+    }
+
+    fs.writeFile('./data.json', JSON.stringify({ puppies: puppyList }, null, 4), function (err) {
+      res.redirect('/puppies')
+    })
+  })
+})
 
 
 
-
-
-module.exports = router
+module.exports = router;
