@@ -16,7 +16,7 @@ test("check landing page is working", (done) => {
 })
 
 test("check text id is correct", (done) => {
-    supertest(server).get('/').end(function (err, res) {
+    supertest(server).get('/puppies/1').end(function (err, res) {
         console.log(res.text)
         expect(err).toBeNull()
         let expected = 'Fido'
